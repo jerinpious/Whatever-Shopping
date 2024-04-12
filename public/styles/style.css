@@ -1,0 +1,276 @@
+html {
+    scroll-behavior: smooth;
+  }
+  @font-face {
+    font-family: lemonmilk;
+    src: url(LEMONMILK-Bold.otf);
+  }
+  @font-face {
+    font-family: Gotham;
+    src: url(GothamMedium.ttf);
+  }
+
+  body {
+    font-family: Gotham;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+  }
+  
+  nav {
+    border-bottom: 10%;
+    background-color: #111;
+    color: white;
+    padding: 10px 30px;
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+  
+  .Checkout {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+    
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: black;
+    color: whitesmoke;
+    
+}
+
+.product img {
+    border-radius: 10%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: whitesmoke;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn:hover {
+  color: white;
+  background-color: grey;
+}
+/* Add this to your existing CSS or create a new stylesheet */
+
+.banner {
+  text-align: center;
+  margin-bottom: 20px;
+  max-height: 500px; 
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 50%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.banner-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Product page */
+
+.product-container {
+  padding: 20px;
+}
+
+.product-heading {
+  margin-top: 30px;
+  margin-left: 20px;
+  text-align: left;
+  padding: 20px;
+}
+
+.product-heading h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.product-heading h1 span {
+  font-weight: bold;
+  color: darkgray;
+}
+
+
+.product-box {
+  padding: 20px;
+  display: flex;
+  align-items:start;
+}
+
+.product-details {
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+
+.product-image {
+  margin-right: 20px;
+  max-width: 60%;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quantity {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.quantity input {
+  padding: 10px;
+  width: 80px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.add-to-cart {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: grey;
+  color: black;
+}
+
+/*checkout page*/
+        
+.login-container {
+    margin-top: 50px;
+}
+
+ .login-h3 {
+  margin-top: 100px;
+  text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-form .btn {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.login-form .btn:hover {
+    background-color: grey;
+    color: white;
+}

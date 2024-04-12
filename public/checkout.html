@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <h2>.Whatever</h2>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="images/search.jpg" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="navItem">
+                <a href="checkout.html" class="Checkout">Checkout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="login-container">
+        <h3 class="login-h3">Log in Required</h3>
+        
+        <form class="login-form" id="SendUser" action="" method="POST">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <a href="#" class="btn" onclick="checkUser()">Login</a>
+        </form>
+    </div>
+    <script>
+        function checkUser() {
+            var action = "/login?";
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            action += "username=" + username + "&password=" + password;
+            fetch(action, { method: 'POST' })
+                .then(function (response) {
+                    if (response.status == 202) {
+                        alert('Login successful. Purchase confirmed.');
+                        // Redirect to /display if login is successful
+                        window.location.href = "/display/txt";
+                    } else if (response.status == 401) {
+                        alert('Invalid username or password');
+                        throw new Error('Invalid credentials');
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                });
+            return false; // Prevent the form from submitting
+        }
+    </script>
+    
+</body>
+</html>

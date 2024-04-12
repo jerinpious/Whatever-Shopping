@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product2</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        
+        body {
+            font-family: Gotham;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <h2>.Whatever</h2>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="images/search.jpg" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="navItem">
+                <a href="checkout.html" class="Checkout">Checkout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="product-heading">
+        <h1>Buy <span>Samsung S24 Ultra.</span></h1>
+    </div>
+    <div class="product-box">
+        
+        <div class="product-image">
+            <img src="images/samsungs24-product.jpg" alt="IPhone 15 Pro Max">
+        </div>
+        <div class="product-details">
+            <h3>Samsung Galaxy S24 Ultra 512GB </h3>
+            <p>$1449.99<br><br>$163.33/mo.
+                Suggested monthly payment for 12 months,<br>
+                <br>CPU - Snapdragon8 Gen3 For Galaxy<br><br>6.8" QHD+ (3120 x 1440)<br><br>200mp f1.7 Wide, 50MP F3.4, Tele 1, 10MP f2.4 Tele 2, 12mp F2.2 UltraWide<br><br>Phone Operating System
+                Android 14, One UI 6.1<br><br>Dynamic AMOLED 2X -
+                120HZ<br><br>Front-Facing Camera Resolution
+                12mp f2.2</p>
+            <form id="SendQuantity" action="" method="POST">
+                <div class="quantity">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1">
+                </div>
+                <a href="#" class="add-to-cart" onclick="quantitySubmit()">Add to Cart</a>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function quantitySubmit(){
+            var action = "/addtocart/";
+            var param = document.getElementById("quantity").value;
+            action+=param;
+            action+="/Samsung_S24_Ultra";
+            document.getElementById("SendQuantity").action=action;
+            
+            document.getElementById("SendQuantity").submit();
+        }
+      </script>
+</body>
+</html>

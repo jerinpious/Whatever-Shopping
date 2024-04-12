@@ -1,0 +1,24 @@
+docker run -ti -p 23500:23500 -v C:\Users\Jerin\OneDrive\Desktop\CSCN72050_Lab10:/Shared webserver_dev bash
+./Lab10_Jerin
+
+
+bool readData(crow::response& res) {
+    
+        ifstream file("data");
+        if (file.is_open()) {
+            ostringstream data;
+            data << file.rdbuf();
+
+            res.set_header("Content-Type", "text/plain");
+            res.write(data.str());
+            res.end();
+            return true;
+        }
+        else {
+            res.code = 404;
+            return false;
+        }
+        return true;
+
+    
+}

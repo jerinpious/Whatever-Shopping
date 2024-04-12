@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product2</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        
+        body {
+            font-family: Gotham;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <h2>.Whatever</h2>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="images/search.jpg" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="navItem">
+                <a href="checkout.html" class="Checkout">Checkout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="product-heading">
+        <h1>Buy <span>Apple AirPods Max.</span></h1>
+    </div>
+    <div class="product-box">
+        
+        <div class="product-image">
+            <img src="images/airpodsMax-product.jpg" alt="IPhone 15 Pro Max">
+        </div>
+        <div class="product-details">
+            <h3>Apple AirPods Max </h3>
+            <p>$549.99<br><br>$45.84/mo.*See disclaimers from Show me how button 1
+                suggested payments with 12-Month Financing<br>
+                <br>Wireless Connectivity
+                Bluetooth<br><br>Microphone Features
+                Noise cancelling, Voice Activated<br><br>Battery Life
+                20 hours<br><br>Controls
+                Call, Track selection, Voice assistant, Volume<br>
+            <form id="SendQuantity" action="" method="POST">
+                <div class="quantity">
+                    <input type="number" name="quantity" id="quantity" value="1" min="1">
+                </div>
+                <a href="#" class="add-to-cart" onclick="quantitySubmit()">Add to Cart</a>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function quantitySubmit(){
+            var action = "/addtocart/";
+            var param = document.getElementById("quantity").value;
+            action+=param;
+            action+="/AirPods_Max";
+            document.getElementById("SendQuantity").action=action;
+            
+            document.getElementById("SendQuantity").submit();
+        }
+      </script>
+</body>
+</html>
